@@ -1,0 +1,52 @@
+providers: [
+  {
+    key: "bt"
+    config:
+      commands: [
+        {
+          project: "D:\\c++\\Choose Wisely"
+          source: "D:\\c++\\Choose Wisely\\.build-tools.cson"
+          name: "Compile"
+          command: "g++ main.cpp -o main.exe -lopengl32 -lglfw3 -lgdi32"
+          wd: "."
+          env: {}
+          modifier:
+            save_all: {}
+          environment:
+            name: "child_process"
+            config:
+              stdoe: "both"
+          stdout:
+            pipeline: []
+          stderr:
+            pipeline: []
+          output:
+            console:
+              close_success: true
+              queue_in_buffer: true
+              colors: false
+              stdin: false
+          version: 2
+        }
+        {
+          project: "D:\\c++\\Choose Wisely"
+          source: "D:\\c++\\Choose Wisely\\.build-tools.cson"
+          name: "Run"
+          command: "main.exe"
+          wd: "."
+          env: {}
+          modifier: {}
+          environment:
+            name: "child_process"
+            config:
+              stdoe: "both"
+          stdout:
+            pipeline: []
+          stderr:
+            pipeline: []
+          output: {}
+          version: 2
+        }
+      ]
+  }
+]
